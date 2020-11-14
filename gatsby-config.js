@@ -6,12 +6,12 @@
 
 module.exports = {
     siteMetadata: {
-        title: "WebDev Portfolio",
-        description: "This is WebDev Portfolio Site",
-        author: "@webdev",
-        twitterUsername: "@john_smilga",
-        image: "/twitter-img.png",
-        siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+        title: "Information Technology",
+        description: "This is Information Technology News and Tutorial Site",
+        author: "Femi Kayode",
+        twitterUsername: "@oraclekayfe",
+        image: "/icon.png",
+        siteUrl: "https://itcompass.io",
     },
     plugins: [
         `gatsby-transformer-sharp`,
@@ -34,22 +34,28 @@ module.exports = {
                 //   singleType : `about`
                 //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
                 contentTypes: [`jobs`, `projects`, `blogs`],
-                //singleTypes: [],
+                singleTypes: [`about`],
             },
         },
-        // {
-        //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-        //   options: {
-        //     fonts: [
-        //       {
-        //         family: `Roboto`,
-        //         variants: [`400`, `700`],
-        //       },
-        //       {
-        //         family: `Open Sans`,
-        //       },
-        //     ],
-        //   },
-        // },
+        {
+            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            options: {
+                fonts: [
+                    {
+                        family: `Raleway`,
+                        variants: [`600`, `800`],
+                    },
+                    {
+                        family: `Lato`,
+                    },
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-styled-components`,
+            options: {
+                // Add any options here
+            },
+        },
     ],
 }
