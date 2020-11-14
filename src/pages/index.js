@@ -5,6 +5,7 @@ import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import Services from "../components/Services"
 import Blogs from "../components/Blogs"
+import Subscribe from "../components/Subscribe"
 import SEO from "../components/SEO"
 
 export default ({ data }) => {
@@ -19,6 +20,7 @@ export default ({ data }) => {
             <Services />
             <Projects projects={projects} title="Latest Tutorials" showLink />
             <Blogs blogs={blogs} title="latest articles" showLink />
+            <Subscribe />
         </Layout>
     )
 }

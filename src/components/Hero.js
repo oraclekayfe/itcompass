@@ -27,7 +27,7 @@ const Hero = () => {
             fluid={fluid}
             className="hero"
             style={{
-                height: `95vh`,
+                height: `100vh`,
                 width: `100%`,
                 backgroundColor: `transparent`,
                 backgroundSize: `cover`,
@@ -39,6 +39,7 @@ const Hero = () => {
                 <article className="hero-info">
                     <div>
                         <div className="underline"></div>
+                        <span>Welcome to itcompass </span>
                         <h1>Web Development Tutorials</h1>
                         <p>Tech Trends, Reviews, News & Blog</p>
                     </div>
