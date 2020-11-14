@@ -632,7 +632,7 @@ Projects
 ===============
 */
 .projects {
-    background: var(--clr-grey-10);
+    background: var(--clr-white);
 }
 .project {
     display: grid;
@@ -1048,10 +1048,12 @@ Blog Template
     justify-content: center;
     align-items: center;
     margin: auto auto;
+    height: 300px;
+    background: var(--clr-secondary-color);
+    padding-top: 2.5rem;
 }
 .newsletter-form p {
     text-transform: uppercase;
     text-align: center;
-    margin-top: 1rem;
     font-weight: bold;
 }
