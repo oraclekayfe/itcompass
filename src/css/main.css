@@ -521,6 +521,10 @@ Services
 .service:hover .underline {
     background: var(--clr-white);
 }
+
+.services-section {
+    background: #e6e6e6;
+}
 @media screen and (min-width: 676px) {
     .services-center {
         display: grid;
@@ -632,7 +636,7 @@ Projects
 ===============
 */
 .projects {
-    background: var(--clr-white);
+    background: f2f2f2;
 }
 .project {
     display: grid;
@@ -753,6 +757,9 @@ Projects
 Blog
 ===============
 */
+.blog-section {
+    background: #d9d9d9;
+}
 .blog {
     display: block;
     margin-bottom: 2rem;
@@ -829,7 +836,6 @@ Footer
 ===============
 */
 .footer {
-    height: 9rem;
     background: #222;
     text-align: center;
     display: grid;
@@ -1048,12 +1054,34 @@ Blog Template
     justify-content: center;
     align-items: center;
     margin: auto auto;
-    height: 300px;
-    background: var(--clr-secondary-color);
+    height: 250px;
+    background: #222;
     padding-top: 2.5rem;
+}
+
+.newsletter-form input {
+    padding: 1rem;
+}
+
+.newsletter-form h3 {
+    color: var(--clr-white);
 }
 .newsletter-form p {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
+}
+
+.subscribe-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--clr-secondary-color);
+    color: var(--clr-white);
+    box-shadow: none;
+}
+
+.subscribe-btn:hover {
+    color: var(--clr-secondary-color);
+    background: var(--clr-white);
 }

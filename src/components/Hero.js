@@ -40,8 +40,8 @@ const Hero = () => {
                     <div>
                         <div className="underline"></div>
                         <span>Welcome to itcompass </span>
-                        <h1>Web Development Tutorials</h1>
-                        <p>Tech Trends, Reviews, News & Blog</p>
+                        <h1>Software & Web Development Coding to Deployment</h1>
+                        <p>Tech Trends Reviews, Tutorials, News & Blog.</p>
                     </div>
                 </article>
             </div>

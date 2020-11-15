@@ -1,9 +1,11 @@
 import React from "react"
+import Subscribe from "../components/Subscribe"
 import SocialLinks from "../constants/socialLinks"
 const Footer = () => {
     return (
         <footer className="footer">
             <div>
+                <Subscribe />
                 <SocialLinks styleClass="footer-links"></SocialLinks>
                 <h4>
                     copyright&copy;{new Date().getFullYear()}
