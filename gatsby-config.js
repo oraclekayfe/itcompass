@@ -18,6 +18,8 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sitemap`,
+        `gatsby-plugin-smoothscroll`,
+        `gatsby-plugin-sass`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -38,17 +40,13 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    {
-                        family: `Roboto`,
-                        variants: [`400`, `700`],
-                    },
-                    {
-                        family: `Lato`,
-                    },
+                    `Staatliches`,
+                    `Lato`, // you can also specify font weights and styles
                 ],
+                display: "swap",
             },
         },
         {
@@ -61,9 +59,16 @@ module.exports = {
             resolve: `gatsby-plugin-nprogress`,
             options: {
                 // Setting a color is optional.
-                color: `tomato`,
+                color: `blue`,
                 // Disable the loading spinner.
                 showSpinner: true,
+            },
+        },
+        {
+            resolve: "gatsby-plugin-mailchimp",
+            options: {
+                endpoint:
+                    "https://itcompass.us7.list-manage.com/subscribe/post?u=00da778f11e81ae7ea90d32a3&amp;id=4e8649126b",
             },
         },
     ],

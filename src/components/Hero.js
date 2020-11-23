@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import SocialLinks from "../constants/socialLinks"
 
 const query = graphql`
     {
@@ -40,8 +41,15 @@ const Hero = () => {
                     <div>
                         <div className="underline"></div>
                         <span>Welcome to itcompass </span>
-                        <h1>Software & Web Development Coding to Deployment</h1>
-                        <p>Tech Trends Reviews, Tutorials, News & Blog.</p>
+                        <h1>
+                            Mobile & Web Development <br />
+                            to Deployment
+                        </h1>
+                        <p>
+                            Dev & DevOps Tech Trends Reviews, Tutorials, News &
+                            Blog.
+                        </p>
+                        <SocialLinks />
                     </div>
                 </article>
             </div>
