@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 
 const Error = () => {
@@ -10,9 +10,9 @@ const Error = () => {
             <main className="error-page">
                 <div className="error-container">
                     <h1>oops it's a dead end</h1>
-                    <Link to="/" className="btn">
+                    <AniLink fade to="/" className="btn">
                         back home
-                    </Link>
+                    </AniLink>
                 </div>
             </main>
         </Layout>

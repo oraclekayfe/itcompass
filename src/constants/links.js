@@ -1,46 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
-const data = [
+export default [
     {
-        id: 1,
         text: "home",
-        url: "/",
+        path: "/",
     },
     {
-        id: 2,
         text: "about",
-        url: "/about/",
+        path: "/about/",
     },
     {
-        id: 3,
-        text: "Tutorials",
-        url: "/projects/",
+        text: "projects",
+        path: "/projects/",
     },
     {
-        id: 4,
         text: "blog",
-        url: "/blog/",
+        path: "/blog/",
     },
     {
-        id: 5,
         text: "contact",
-        url: "/contact/",
+        path: "/contact/",
     },
 ]
-
-const tempLinks = data.map(link => {
-    return (
-        <li key={link.id}>
-            <Link to={link.url}>{link.text}</Link>
-        </li>
-    )
-})
-// I KNOW WE CAN COMBINE IT !!!!!
-
-export default ({ styleClass }) => {
-    return (
-        <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-            {tempLinks}
-        </ul>
-    )
-}

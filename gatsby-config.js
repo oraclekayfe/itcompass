@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
         title: "Information Technology",
@@ -20,6 +24,8 @@ module.exports = {
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-smoothscroll`,
         `gatsby-plugin-sass`,
+        `gatsby-plugin-styled-components`,
+        `gatsby-plugin-transition-link`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -50,12 +56,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-styled-components`,
-            options: {
-                // Add any options here
-            },
-        },
-        {
             resolve: `gatsby-plugin-nprogress`,
             options: {
                 // Setting a color is optional.
@@ -67,8 +67,7 @@ module.exports = {
         {
             resolve: "gatsby-plugin-mailchimp",
             options: {
-                endpoint:
-                    "https://itcompass.us7.list-manage.com/subscribe/post?u=00da778f11e81ae7ea90d32a3&amp;id=4e8649126b",
+                endpoint: process.env.MAILCHIMP_ENDPOINT,
             },
         },
     ],

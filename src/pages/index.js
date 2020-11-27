@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Hero from "../components/Hero"
+import StyledHero from "../components/StyledHero"
 import Projects from "../components/Projects"
+import MyTypewriter from "../components/Typewriter.js"
 import Services from "../components/Services"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
@@ -11,11 +12,29 @@ export default ({ data }) => {
     const {
         allStrapiProjects: { nodes: projects },
         allStrapiBlogs: { nodes: blogs },
+        herobg,
     } = data
     return (
         <Layout>
             <SEO title="Home" description="this is our home page" />
-            <Hero />
+            <StyledHero home="true" img={herobg.childImageSharp.fluid}>
+                <div className="section-center hero-center">
+                    <article className="hero-info">
+                        <div>
+                            <div className="underline"></div>
+                            <h4 className="hero-welcome">
+                                Welcome to ITCOMPASS{" "}
+                            </h4>
+                            <MyTypewriter
+                                options={{
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </div>
+                    </article>
+                </div>
+            </StyledHero>
             <Services />
             <Projects projects={projects} title="Latest Tutorials" showLink />
             <Blogs blogs={blogs} title="latest articles" showLink />
@@ -60,6 +79,13 @@ export const query = graphql`
                             ...GatsbyImageSharpFluid
                         }
                     }
+                }
+            }
+        }
+        herobg: file(relativePath: { eq: "itech2.jpg" }) {
+            childImageSharp {
+                fluid(quality: 90, maxWidth: 4160) {
+                    ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }

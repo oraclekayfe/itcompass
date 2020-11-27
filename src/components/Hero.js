@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import SocialLinks from "../constants/socialLinks"
+import MyTypewriter from "./Typewriter.js"
 
 const query = graphql`
     {
@@ -40,16 +40,13 @@ const Hero = () => {
                 <article className="hero-info">
                     <div>
                         <div className="underline"></div>
-                        <span>Welcome to itcompass </span>
-                        <h1>
-                            Mobile & Web Development <br />
-                            to Deployment
-                        </h1>
-                        <p>
-                            Dev & DevOps Tech Trends Reviews, Tutorials, News &
-                            Blog.
-                        </p>
-                        <SocialLinks />
+                        <h4>Welcome to ITCOMPASS </h4>
+                        <MyTypewriter
+                            options={{
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
                     </div>
                 </article>
             </div>
