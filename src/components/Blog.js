@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 const Blog = ({ id, title, image, date, category, slug, desc }) => {
     return (
-        <Link to={`/blogs/${slug}`} className="blog" key={id}>
+        <AniLink fade to={`/blogs/${slug}`} className="blog" key={id}>
             <article>
                 {image && (
                     <Image
@@ -21,7 +21,7 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
                     </div>
                 </div>
             </article>
-        </Link>
+        </AniLink>
     )
 }
 

@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import Projects from "../components/Projects"
 import MyTypewriter from "../components/Typewriter.js"
+import Contact from "../components/Contact.js"
 import Services from "../components/Services"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
@@ -38,6 +39,7 @@ export default ({ data }) => {
             <Services />
             <Projects projects={projects} title="Latest Tutorials" showLink />
             <Blogs blogs={blogs} title="latest articles" showLink />
+            <Contact />
         </Layout>
     )
 }

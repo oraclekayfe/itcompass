@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
 
@@ -15,9 +16,9 @@ const ComponentName = ({ data }) => {
                     <article className="blog-content">
                         {<ReactMarkdown source={content} />}
                     </article>
-                    <Link to="/blog" className="btn center-btn">
+                    <AniLink fade to="/blog" className="btn center-btn">
                         blog
-                    </Link>
+                    </AniLink>
                 </div>
             </section>
         </Layout>
