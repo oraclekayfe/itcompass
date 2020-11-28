@@ -1,16 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import StyledHero from "../components/StyledHero"
+import Banner from "../components/Banner"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
 
 const ComponentName = ({ data }) => {
-    const { content, title, desc } = data.blog
+    const { content, title, desc, blogbg } = data.blog
 
     return (
         <Layout>
             <SEO title={title} description={desc} />
+            <StyledHero img={blogbg.childImageSharp.fluid}>
+                <Banner title={title}></Banner>
+            </StyledHero>
             <section className="blog-template">
                 <div className="section-center">
                     <article className="blog-content">
@@ -31,6 +36,14 @@ export const query = graphql`
             content
             title
             desc
+            blogbg: image {
+                childImageSharp {
+                    fluid(quality: 90, maxWidth: 4160) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+            }
+            published_at(formatString: "MMM Do, YYYY")
         }
     }
 `
