@@ -1,7 +1,7 @@
 .footer {
     margin-top: auto;
-    background: var(--clr-dark-color);
-    padding: 2rem;
+    background: #253b4d;
+    padding: 3rem;
     text-align: center;
     color: var(--mainWhite);
 }
@@ -20,8 +20,8 @@
 }
 .icons a {
     display: inline-block;
-    margin: 1rem;
-    font-size: 1.3rem;
+    margin: 0.55rem;
+    font-size: 2rem;
     color: var(--mainWhite);
     transition: var(--mainTransition);
 }

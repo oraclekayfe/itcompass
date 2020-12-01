@@ -2,10 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
-import Projects from "../components/Projects"
 import MyTypewriter from "../components/Typewriter.js"
+import About from "../components/About.js"
+import Projects from "../components/Projects"
 import Contact from "../components/Contact.js"
-import Services from "../components/Services"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
 
@@ -24,7 +24,7 @@ export default ({ data }) => {
                         <div>
                             <div className="underline"></div>
                             <h4 className="hero-welcome">
-                                Welcome to ITCOMPASS{" "}
+                                Welcome to ITCOMPASS
                             </h4>
                             <MyTypewriter
                                 options={{
@@ -36,9 +36,9 @@ export default ({ data }) => {
                     </article>
                 </div>
             </StyledHero>
-            <Services />
+            <About />
+            <Blogs blogs={blogs} title="latest blog post" showLink />
             <Projects projects={projects} title="Latest Tutorials" showLink />
-            <Blogs blogs={blogs} title="latest articles" showLink />
             <Contact />
         </Layout>
     )

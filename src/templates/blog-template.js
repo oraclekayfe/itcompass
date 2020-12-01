@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner"
+import Contact from "../components/Contact.js"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
@@ -14,17 +15,20 @@ const ComponentName = ({ data }) => {
         <Layout>
             <SEO title={title} description={desc} />
             <StyledHero img={blogbg.childImageSharp.fluid}>
-                <Banner title={title}></Banner>
+                <Banner title={title} info="Introduction to CSS"></Banner>
             </StyledHero>
-            <section className="blog-template">
-                <div className="section-center">
+            <section className="blog-template section-center">
+                <div className="page-content page-container">
                     <article className="blog-content">
                         {<ReactMarkdown source={content} />}
                     </article>
-                    <AniLink fade to="/blog" className="btn center-btn">
-                        blog
-                    </AniLink>
+                    <aside>
+                        <Contact />
+                    </aside>
                 </div>
+                <AniLink fade to="/blog" className="btn center-btn">
+                    blog
+                </AniLink>
             </section>
         </Layout>
     )
