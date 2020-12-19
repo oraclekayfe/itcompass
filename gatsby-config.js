@@ -10,12 +10,16 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Information Technology",
-    description: "This is Information Technology News and Tutorial Site",
+    title: "Information Technology At Your Fingertip",
+    description:
+      " ITCompass is dedicated to bringing the world quality Information and Communications Technology News, Tech Trends, Gadget Reviews, Software, App and Web Development Content, Mobile & Web Development to Deployment, Dev & DevOps Blog Posts. ",
     author: "@Femi_Kayode",
     twitterUsername: "@oraclekayfe",
     image: "/icon.png",
     siteUrl: "https://itcompass.io",
+  },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -23,7 +27,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     {
@@ -46,8 +49,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Staatliches`,
-          `Lato`, // you can also specify font weights and styles
+          `Roboto\:400,700,900`,
+          `Open Sans\:400,700`, // you can also specify font weights and styles
         ],
         display: "swap",
       },
@@ -73,6 +76,12 @@ module.exports = {
         host: "https://www.itcompass.io",
         sitemap: "https://www.itcompass.io/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
   ],

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import logo from "../assets/itcompass_logo1.svg"
+import logo from "../assets/itlogo2.png"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"

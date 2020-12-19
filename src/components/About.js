@@ -12,11 +12,11 @@ const About = () => {
                 <article className="abt-text">
                     <Title title="about" />
                     <p>
-                        ITCOMPASS is dedicated to bringing the world the highest
-                        quality Information and communications technology news,
-                        tech trends, gadget reviews, software, app and web
-                        development content and blog. Mobile & Web Development
-                        to Deployment, Dev & DevOps Blog post.
+                        itcompass is dedicated to bringing the world quality
+                        information and communications technology news, tech
+                        trends, gadget reviews, software, app and web
+                        development content, mobile & web development to
+                        deployment, dev & devops blog posts.
                     </p>
                 </article>
             </div>

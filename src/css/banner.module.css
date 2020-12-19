@@ -1,26 +1,61 @@
 .banner {
-    text-align: center;
-    letter-spacing: var(--mainSpacing);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
     color: var(--mainWhite);
 }
+
 .banner h1 {
-    font-size: 3.3rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
-    letter-spacing: 6px;
 }
+
 .banner p {
     width: 85%;
-    margin: 0 auto;
     margin-bottom: 2rem;
     color: var(--mainWhite);
 }
+
+.banner h4 {
+    color: var(--clr-secondary-color);
+    font-family: "Open Sans", sans-serif; 
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.underline {
+    width: 5rem;
+    height: 0.25rem;
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    background: var(--clr-secondary-color);
+    margin-left: 0;
+    margin-right: auto;
+}
+
 @media screen and (min-width: 768px) {
-    .banner h1 {
-        font-size: 4.5rem;
+    .banner {
+        width: 95%;
+    padding: 0 6rem;
     }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
     .banner p {
         width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+.banner h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 6px;
     }
 }
