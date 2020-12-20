@@ -22,6 +22,8 @@ const ComponentName = ({ data }) => {
         <div className="page-content page-container">
           <article className="blog-content">
             {<ReactMarkdown source={content} />}
+            <h3 className="share-h3">Share This Post</h3>
+            <div class="s9-widget-wrapper" className="s9-widget-wrapper"></div>
           </article>
           <aside>
             <div className="aside-about">

@@ -5,6 +5,7 @@ import styles from "../css/banner.module.css"
 const Banner = ({ title, info, children, welcome, showIcon }) => {
   const bannerRef = useRef(null)
   const svgRef = useRef(null)
+  const fancyRef = useRef(null)
 
   useEffect(() => {
     gsap.from(bannerRef.current, {
@@ -31,7 +32,7 @@ const Banner = ({ title, info, children, welcome, showIcon }) => {
     <div ref={bannerRef} className={styles.banner}>
       <div className={styles.underline}></div>
       <h4>{welcome}</h4>
-      <h1>{title}</h1>
+      <h1 ref={fancyRef}>{title}</h1>
       <p>{info}</p>
       {showIcon ? (
         <div ref={svgRef} className="scroller">

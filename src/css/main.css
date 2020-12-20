@@ -968,6 +968,17 @@ aside .input-group button {
     border: 1px dashed var(--clr-secondary-color);
 }
 
+.s9-widget-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.share-h3 {
+    text-align: center;
+    padding-top: 2rem;
+}
 
 /* Animations */
 @keyframes slideInFromLeft {

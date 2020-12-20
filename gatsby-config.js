@@ -84,5 +84,15 @@ module.exports = {
         trackingId: process.env.GA_TRACKING_ID,
       },
     },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        id: "s9-sdk",
+        async: true,
+        defer: true,
+        content: "ed779ccb895d456d9ff1790ec5a98a70",
+        src: "//cdn.social9.com/js/socialshare.min.js",
+      },
+    },
   ],
 }
