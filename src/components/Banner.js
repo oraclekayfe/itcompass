@@ -2,17 +2,25 @@ import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import styles from "../css/banner.module.css"
 
-const Banner = ({ title, info, children, welcome, showIcon }) => {
-  const bannerRef = useRef(null)
+const Banner = ({ title, info, children, showIcon }) => {
   const svgRef = useRef(null)
-  const fancyRef = useRef(null)
+  const strText = title.split("")
+  const revealRefs = useRef([])
 
   useEffect(() => {
-    gsap.from(bannerRef.current, {
-      duration: 1,
-      autoAlpha: 0,
-      ease: "none",
-      delay: 1,
+    revealRefs.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        {
+          autoAlpha: 0,
+        },
+        {
+          duration: 1,
+          autoAlpha: 1,
+          ease: "none",
+          stagger: 0.2,
+        }
+      )
     })
   }, [])
 
@@ -24,15 +32,29 @@ const Banner = ({ title, info, children, welcome, showIcon }) => {
       duration: 2,
       ease: "back",
       scale: 3,
-      delay: 3,
+      delay: 1,
     })
   }, [])
 
+  const addToRefs = el => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el)
+    }
+    console.log(revealRefs.current)
+  }
+
   return (
-    <div ref={bannerRef} className={styles.banner}>
+    <div className={styles.banner}>
       <div className={styles.underline}></div>
-      <h4>{welcome}</h4>
-      <h1 ref={fancyRef}>{title}</h1>
+      <h1>
+        {strText.map((el, index) => {
+          return (
+            <span className="fade" key={index} ref={addToRefs}>
+              {el}
+            </span>
+          )
+        })}
+      </h1>
       <p>{info}</p>
       {showIcon ? (
         <div ref={svgRef} className="scroller">
